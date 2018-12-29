@@ -25,3 +25,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+## 简要说明
+
+qa/app/Http/Controllers/Admin/QaListController.php 下的show()方法调用QA-handler 中的core_model.py
