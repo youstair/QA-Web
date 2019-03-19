@@ -7,7 +7,8 @@
 					<div class="logo">后台管理</div>
 					<ul>
 						<li><a href="#" class="active">首页</a></li>
-						<li><a href="{{url('admin/qalist')}}">发起提问</a></li>
+						{{--<li><a href="{{url('admin/qalist')}}">发起提问</a></li>--}}
+						<li><a href="{{url('admin/qalist')}}" target="main">发起提问</a></li>
 					</ul>
 				</div>
 				<div class="top_right">
@@ -42,11 +43,11 @@
 					<li>
 						<h3><i class="fa fa-fw fa-thumb-tack"></i>问答对分类导航</h3>
 						<ul class="sub_menu">
-							<li><a href="http://www.yeahzan.com/fa/facss.html" target="main"><i class="fa fa-fw fa-font"></i>WebService</a></li>
+							<li><a href="http://www.runoob.com/webservices/webservices-tutorial.html" target="main"><i class="fa fa-fw fa-font"></i>WebService</a></li>
 							<li><a href="http://hemin.cn/jq/cheatsheet.html" target="main"><i class="fa fa-fw fa-chain"></i>ASP_NET</a></li>
 							<li><a href="http://tool.c7sky.com/webcolor/" target="main"><i class="fa fa-fw fa-tachometer"></i>HTML_CSS</a></li>
 							{{--<li><a href="element.html" target="main"><i class="fa fa-fw fa-tags"></i>JavaScript</a></li>--}}
-							<li><a href="{{url('admin/JavaScript')}}"><i class="fa fa-fw fa-tags"></i>JavaScript</a></li>
+							<li><a href="{{url('admin/JavaScript')}}" target="main"><i class="fa fa-fw fa-tags"></i>JavaScript</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -61,7 +62,7 @@
 
 			<!--底部 开始-->
 			<div class="bottom_box">
-				CopyRight © 2015. Powered By <a href="http://www.houdunwang.com">http://www.houdunwang.com</a>.
+				CopyRight © 2019. Powered By <a href="http://www.youstair.com">http://www.youstair.com</a>.
 			</div>
 			<!--底部 结束-->
 

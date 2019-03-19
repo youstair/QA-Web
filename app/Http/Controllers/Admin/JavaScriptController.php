@@ -104,22 +104,15 @@ class JavaScriptController extends CommonController
         return view('JavaScript.edit',compact('field'));
     }
 ///var/www/html/youstair.com/qa
-    public function ask($question)
+    public function ask()
     {
-
-        unset($out);
-        $ids="JavaScript";
-        $idt=$question;
-//$c=exec("/usr/bin/python3 ".$dir."/qa/core_model/core1.py {$id} {$ids}",$out,$res);
-        $c=exec("PYTHONIOENCODING=utf-8 /usr/bin/python3 /home/youstair/PycharmProjects/runoob_db/venv/core_model.py $ids $idt",$out,$res);
-
-        $ppp=($out);
-        var_dump($c);
-        echo '</br>';
-
-        var_dump($out);
-
-        echo '</br>';
-        var_dump($res);
+        echo 12;
+        $ans=session('ans');
+        if(!empty($ans)){
+            var_dump($ans[0][1]);
+            $javascript=JavaScript::find($ans[2][1]);
+            print_r($javascript['answer']);
+        }
+        else return redirect('admin/qalist');
     }
 }

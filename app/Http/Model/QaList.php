@@ -14,20 +14,23 @@ class QaList extends Model
     protected $guarded=[];
 
 
-    public function getanswer($ids,$idt)
+    public function show($ids,$idt)
     {
         echo $ids,$idt;
         echo '</br>';
         unset($out);
-        $c=exec("PYTHONIOENCODING=utf-8 /usr/bin/python3 /home/youstair/PycharmProjects/runoob_db/venv/core_model.py $ids $idt",$out,$res);
-
-        var_dump($c);
+        print_r('123');
+        echo 123;
+//        $c=exec("PYTHONIOENCODING=utf-8 /usr/bin/python3 /home/youstair/PycharmProjects/QA_handler/main/core_model.py $ids $idt",$out,$res);
+//
+//        var_dump($c);
+////        echo '</br>';
+////
+//        var_dump($out);
+////
 //        echo '</br>';
-//
-        var_dump($out);
-//
-        echo '</br>';
-//        var_dump($res);
-        return $out;
+////        var_dump($res);
+//        return $out;
     }
 }
+///home/youstair/PycharmProjects/QA_handler/main/core_model.py

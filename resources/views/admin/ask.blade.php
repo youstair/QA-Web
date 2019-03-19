@@ -11,7 +11,7 @@
     <!--结果集标题与导航组件 结束-->
 {{-- admin/category/{category}--}}
     <div class="result_wrap">
-        <form action="{{url('admin/qalist/getanswer')}}" method="get">
+        <form action="{{url('admin/qalist/{getanswer}')}}" method="get">
             {{csrf_field()}}
             <table class="add_tab">
                 <tbody>

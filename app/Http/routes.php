@@ -20,8 +20,6 @@ Route::group(['middleware' => ['web']], function () {
     Route::any('admin/login', 'Admin\LoginController@login');
 //    Route::any('admin/crypt', 'Admin\LoginController@crypt');
     Route::get('admin/code', 'Admin\LoginController@code');
-    Route::any('past滴滴打车', 'Admin\IndexController@test1');
-
 
 });
 
@@ -33,9 +31,12 @@ Route::group(['middleware' => ['web','admin.login'],'prefix'=>'admin','namespace
     Route::any('pass', 'IndexController@pass');
     Route::any('home', 'IndexController@home');
     Route::post('cate/changeorder','CategoryController@changeOrder');
-
-    Route::any('WebService/ask/{question}', 'WebServiceController@ask');
-
+//ask 方法群 开始
+    Route::any('WebService/ask', 'WebServiceController@ask');
+    Route::any('ASP_NET/ask', 'ASP_NETController@ask');
+    Route::any('JavaScript/ask', 'JavaScriptController@ask');
+    Route::any('HTML_CSS/ask', 'HTML_CSSController@ask');
+//ask 方法群 结束
     Route::resource('category', 'CategoryController');
 
 

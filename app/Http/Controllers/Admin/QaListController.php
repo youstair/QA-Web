@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 
 use App\Http\Model\QaList;
-
 use Illuminate\Support\Facades\Input;
 
 class QaListController extends CommonController
@@ -26,11 +25,22 @@ class QaListController extends CommonController
         unset($out);
         $ids=$input['table_id'];
         $idt=$input['question'];
-        $c=exec("PYTHONIOENCODING=utf-8 python3 /home/youstair/PycharmProjects/runoob_db/venv/core_model.py $ids $idt",$out,$res);
-
-        return $c;
-
+        $wait_l=array(" ","    ","\t","\n","\r");
+        $wait_s=array("","","","","");
+        $idts=str_replace($wait_l,$wait_s,$idt);
+        var_dump($idts);
+        exec("/usr/bin/python3 /var/www/html/youstair.com/qa/QA_handler/main/test.py 2>&1 {$ids} {$idts} ",$out,$res);
+        $ans=[];
+        $index=4;
+        $indet=0;
+        while($index<7){
+            $ans[$indet++]=explode(',',$out[$index++]);
+        }
+        $next_controller='Admin'.'\\'.$ids.'Controller@ask';
+        print_r($next_controller);
+        return redirect()->action($next_controller)->with('ans', $ans);
     }
+
     //get.admin/qalist  展示分类列表
     public function AnswerList()
     {
