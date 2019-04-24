@@ -26,6 +26,22 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
 
-## 简要说明
+## 项目简要说明
 
-qa/app/Http/Controllers/Admin/QaListController.php 下的show()方法调用QA-handler 中的core_model.py
+项目主体使用laravel5.2架构，数据处理使用python3.6脚本(QA-handler)
+
+QA-handler主要包含QA对生成算法与问题匹配算法
+
+## 项目介绍
+
+为提高信息获取效率，设计了应用于编程知识获取领域的智能问答系统，并分别提出基于规则、基于NLP以及基于机器学习的智能问答知识库构建方法。同时比较了TF-IDF和LSI两种相似度计算算法的优劣。
+
+## 配置说明
+
+代理：apache2.4
+
+框架：laravel5.2(PHP7.2.15)
+
+数据处理：python3.6
+
+分词：jieba
