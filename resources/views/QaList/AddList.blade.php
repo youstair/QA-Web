@@ -36,7 +36,7 @@
                     <tr>
                         <td class="tc">{{$v->cate_id}}</td>
                         <td>
-                            <a href="{{url('admin/')}}/{{$v->cate_name}}/create">{{$v->cate_name}}  点击跳转</a>
+                            <a href="{{url('admin/')}}/{{$v->cat_name}}/create">{{$v->cate_name}}  点击跳转</a>
                         </td>
                     </tr>
 

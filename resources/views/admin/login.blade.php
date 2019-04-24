@@ -31,7 +31,10 @@
 						<img src="{{url('admin/code')}}" alt="" onclick="this.src='{{url('admin/code')}}?'+Math.random()">
 					</li>
 					<li>
-						<input type="submit" value="立即登陆"/>
+						<input type="submit" value="管理员登陆"/>
+					</li>
+					<li>
+						<input type="submit" value="免登录提问"/>
 					</li>
 				</ul>
 			</form>

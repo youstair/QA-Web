@@ -104,15 +104,4 @@ class JavaScriptController extends CommonController
         return view('JavaScript.edit',compact('field'));
     }
 ///var/www/html/youstair.com/qa
-    public function ask()
-    {
-        echo 12;
-        $ans=session('ans');
-        if(!empty($ans)){
-            var_dump($ans[0][1]);
-            $javascript=JavaScript::find($ans[2][1]);
-            print_r($javascript['answer']);
-        }
-        else return redirect('admin/qalist');
-    }
 }

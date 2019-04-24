@@ -104,16 +104,4 @@ class HTML_CSSController extends CommonController
 //        $data=HTML_CSS::where('cate_pid',0)->get();
         return view('HTML_CSS.edit',compact('field'));
     }
-
-    public function ask()
-    {
-        echo 12;
-        $ans=session('ans');
-        if(!empty($ans)){
-            var_dump($ans[0][1]);
-            $html=HTML_CSS::find($ans[2][1]);
-            print_r($html['answer']);
-        }
-        else return redirect('admin/qalist');
-    }
 }

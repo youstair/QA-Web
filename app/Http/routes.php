@@ -47,6 +47,17 @@ Route::group(['middleware' => ['web','admin.login'],'prefix'=>'admin','namespace
     Route::resource('ASP_NET', 'ASP_NETController');
     Route::resource('HTML_CSS', 'HTML_CSSController');
     Route::resource('JavaScript', 'JavaScriptController');
+
+    Route::resource('XML', 'XMLController');
+    Route::resource('KFGJ', 'KFGJController');
+    Route::resource('YDD', 'YDDController');
+    Route::resource('FWD', 'FWDController');
+    Route::resource('WZJS', 'WZJSController');
+    Route::resource('Qs', 'QsController');
+//    Route::resource('JavaScript', 'JavaScriptController');
+
+
+
     Route::any('/AnswerList', 'QaListController@AnswerList');
     Route::any('/AddList', 'QaListController@AddList');
 });

@@ -43,11 +43,21 @@
 					<li>
 						<h3><i class="fa fa-fw fa-thumb-tack"></i>问答对分类导航</h3>
 						<ul class="sub_menu">
-							<li><a href="http://www.runoob.com/webservices/webservices-tutorial.html" target="main"><i class="fa fa-fw fa-font"></i>WebService</a></li>
-							<li><a href="http://hemin.cn/jq/cheatsheet.html" target="main"><i class="fa fa-fw fa-chain"></i>ASP_NET</a></li>
-							<li><a href="http://tool.c7sky.com/webcolor/" target="main"><i class="fa fa-fw fa-tachometer"></i>HTML_CSS</a></li>
+							<li><a href="{{url('admin/WebService')}}" target="main"><i class="fa fa-fw fa-font"></i>WebService</a></li>
+							<li><a href="{{url('admin/ASP_NET')}}" target="main"><i class="fa fa-fw fa-chain"></i>ASP_NET</a></li>
+							<li><a href="{{url('admin/HTML_CSS')}}" target="main"><i class="fa fa-fw fa-tachometer"></i>HTML_CSS</a></li>
 							{{--<li><a href="element.html" target="main"><i class="fa fa-fw fa-tags"></i>JavaScript</a></li>--}}
 							<li><a href="{{url('admin/JavaScript')}}" target="main"><i class="fa fa-fw fa-tags"></i>JavaScript</a></li>
+							<li><a href="{{url('admin/WebService')}}" target="main"><i class="fa fa-fw fa-font"></i>WebService</a></li>
+
+
+							<li><a href="{{url('admin/KFGJ')}}" target="main"><i class="fa fa-fw fa-chain"></i>开发工具</a></li>
+							<li><a href="{{url('admin/WZJS')}}" target="main"><i class="fa fa-fw fa-tachometer"></i>网站建设</a></li>
+							{{--<li><a href="element.html" target="main"><i class="fa fa-fw fa-tags"></i>JavaScript</a></li>--}}
+							<li><a href="{{url('admin/FWD')}}" target="main"><i class="fa fa-fw fa-tags"></i>服务端</a></li>
+							<li><a href="{{url('admin/YDD')}}" target="main"><i class="fa fa-fw fa-tachometer"></i>移动端</a></li>
+							{{--<li><a href="element.html" target="main"><i class="fa fa-fw fa-tags"></i>JavaScript</a></li>--}}
+							<li><a href="{{url('admin/Qs')}}" target="main"><i class="fa fa-fw fa-tags"></i>Qs</a></li>
 						</ul>
 					</li>
 				</ul>

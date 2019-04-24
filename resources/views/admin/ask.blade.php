@@ -10,6 +10,7 @@
     <!--结果集标题与导航组件 开始-->
     <!--结果集标题与导航组件 结束-->
 {{-- admin/category/{category}--}}
+
     <div class="result_wrap">
         <form action="{{url('admin/qalist/{getanswer}')}}" method="get">
             {{csrf_field()}}
@@ -21,7 +22,7 @@
                         <select name="table_id">
                             <option value="0">==问题分类==</option>
                             @foreach($data as $d)
-                                <option value="{{$d->cate_name}}">{{$d->cate_name}}</option>
+                                <option value="{{$d->cat_name}}">{{$d->cate_name}}</option>
                             @endforeach
                         </select>
                     </td>
@@ -41,6 +42,11 @@
 
                     </td>
                 </tr>
+                @if(session('smsg'))
+                    <tr>
+                        <p style="color:red">{{session('smsg')}}</p>
+                    </tr>
+                @endif
                 </tbody>
             </table>
         </form>

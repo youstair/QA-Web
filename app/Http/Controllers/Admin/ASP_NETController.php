@@ -104,16 +104,4 @@ class ASP_NETController extends CommonController
 //        $data=ASP_NET::where('cate_pid',0)->get();
         return view('ASP_NET.edit',compact('field'));
     }
-
-    public function ask()
-    {
-        echo 12;
-        $ans=session('ans');
-        if(!empty($ans)){
-            var_dump($ans[0][1]);
-            $asp=ASP_NET::find($ans[2][1]);
-            print_r($asp['answer']);
-        }
-        else return redirect('admin/qalist');
-    }
 }

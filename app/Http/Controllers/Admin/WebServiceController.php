@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Model\WebService;
@@ -15,21 +14,22 @@ use Illuminate\Support\Facades\Input;
 class WebServiceController extends CommonController
 {
     //
-    //get.admin/webservice  问答对列表首页
+    //
+    //get.admin/WebService  问答对列表首页
     public function index()
     {
-//        $webservices=(new webservice)->tree();
-//        return view('admin.webservice.index')->with('data',$webservices);
+//        $WebServices=(new WebService)->tree();
+//        return view('admin.WebService.index')->with('data',$WebServices);
         $data=WebService::paginate(15);
 //        print_r($data->links());
         return view('WebService.index',compact('data'));
     }
-    //get admin/webservice/create 添加问答对
+    //get admin/WebService/create 添加问答对
     public function create()
     {
         return view('WebService/add');
     }
-    //post.admin/webservice 添加问答对提交
+    //post.admin/WebService 添加问答对提交
     public function store()
     {
         $input=Input::except('_token');
@@ -51,7 +51,7 @@ class WebServiceController extends CommonController
         {
             $re=WebService::create($input);
             if($re){
-                return redirect('admin/webservice');
+                return redirect('admin/WebService');
             }else{
                 back()->with('msg','数据填充失败，请稍后重试');
             }
@@ -62,27 +62,27 @@ class WebServiceController extends CommonController
         }
     }
 
-    //get  admin/webservice/{webservice} 展示问答对答案
+    //get  admin/WebService/{WebService} 展示问答对答案
     public function show($id)
     {
-       $re=WebService::find($id);
-       return $re->answer;
+        $re=WebService::find($id);
+        return $re->answer;
     }
-    //put  admin.webservice.update
+    //put  admin.WebService.update
     public function update($id)
     {
         $input=Input::except('_token','_method');
-        $re=webservice::where('id',$id)->update($input);
+        $re=WebService::where('id',$id)->update($input);
         if($re){
-            return redirect('admin/webservice');
+            return redirect('admin/WebService');
         }else{
             back()->with('msg','问答对更新失败，请稍后重试');
         }
     }
-    //delete admin/webservice/{webservice}
+    //delete admin/WebService/{WebService}
     public function destroy($id)
     {
-        $re=webservice::where('id',$id)->delete();
+        $re=WebService::where('id',$id)->delete();
         if($re){
             $data=[
                 'status'=>0,
@@ -96,24 +96,12 @@ class WebServiceController extends CommonController
         }
         return $data;
     }
-    //get  admin.webservice.edit
-//    admin/webservice/{webservice}/edit
+    //get  admin.WebService.edit
+//    admin/WebService/{WebService}/edit
     public function edit($cate_id)
     {
         $field=WebService::find($cate_id);
-//        $data=webservice::where('cate_pid',0)->get();
+//        $data=WebService::where('cate_pid',0)->get();
         return view('WebService.edit',compact('field'));
-    }
-
-    public function ask()
-    {
-        echo 12;
-        $ans=session('ans');
-        if(!empty($ans)){
-            var_dump($ans[0][1]);
-            $webservice=WebService::find($ans[2][1]);
-            print_r($webservice['answer']);
-        }
-        else return redirect('admin/qalist');
     }
 }

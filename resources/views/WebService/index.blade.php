@@ -3,7 +3,7 @@
     <!--面包屑导航 开始-->
     <div class="crumb_warp">
         <!--<i class="fa fa-bell"></i> 欢迎使用登陆网站后台，建站的首选工具。-->
-        <i class="fa fa-home"></i> <a href="{{url('admin/index')}}">首页</a> &raquo; WebService全部问答对
+        <i class="fa fa-home"></i> <a href="{{url('admin/index')}}">首页</a> &raquo; 网站建设全部问答对
     </div>
     <form action="#" method="post">
 
@@ -14,8 +14,8 @@
             <!--快捷导航 开始-->
             <div class="result_content">
                 <div class="short_wrap">
-                    <a href="{{url('admin/webservice/create')}}"><i class="fa fa-plus"></i>添加问答对</a>
-                    <a href="{{url('admin/webservice')}}"><i class="fa fa-recycle"></i>全部问答对</a>
+                    <a href="{{url('admin/WebService/create')}}"><i class="fa fa-plus"></i>添加问答对</a>
+                    <a href="{{url('admin/WebService')}}"><i class="fa fa-recycle"></i>全部问答对</a>
                 </div>
             </div>
             <!--快捷导航 结束-->
@@ -47,14 +47,14 @@
                         {{--</td>--}}
                         <td>{{$v->question}}</td>
                         <td>
-                            <a href="{{url('admin/webservice/')}}/{{$v->id}}">点击获取答案</a>
+                            <a href="{{url('admin/WebService/')}}/{{$v->id}}">点击获取答案</a>
                         </td>
                         {{--<td>--}}
                             {{--<a href="#">{{$v->link}}</a>--}}
                         {{--</td>--}}
                         <td>{{$v->link}}</td>
                         <td>
-                            <a href="{{url('admin/webservice/'.$v->id.')/edit')}}">修改</a>
+                            <a href="{{url('admin/WebService/'.$v->id.')/edit')}}">修改</a>
                             <a href="javascript:" onclick="delCate({{$v->id}})">删除</a>
                         </td>
                     </tr>
@@ -75,7 +75,7 @@
             layer.confirm('您确定要删除此问答对吗？', {
                 btn: ['确定','取消'] //按钮
             }, function(){
-                $.post("{{url('admin/webservice/')}}/"+id,{'_method':'delete','_token':"{{csrf_token()}}"},function (data) {
+                $.post("{{url('admin/WebService/')}}/"+id,{'_method':'delete','_token':"{{csrf_token()}}"},function (data) {
                     if(data.status==0){
                         layer.msg(data.msg, {icon: 6});
                         location.href=location.href;

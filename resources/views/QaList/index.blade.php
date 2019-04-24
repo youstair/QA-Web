@@ -40,7 +40,7 @@
                         {{--</td>--}}
                         <td class="tc">{{$v->cate_id}}</td>
                         <td>
-                            <a href="{{url('admin/')}}/{{$v->cate_name}}">{{$v->cate_name}}  点击跳转</a>
+                            <a href="{{url('admin/')}}/{{$v->cat_name}}">{{$v->cate_name}}  点击跳转</a>
                         </td>
                     </tr>
 

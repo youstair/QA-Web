@@ -98,6 +98,6 @@ class IndexController extends CommonController
 
     public function home()
     {
-        return view('homepage');
+        return view('admin.info');
     }
 }
